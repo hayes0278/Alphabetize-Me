@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Alphabetize Me!</h1>
+    <p>A small utility for securely alphabetizing a list of data values.</p>
+</div>
+
+<p>
+    <form id="frmAlphabetizeMe" name="frmAlphabetizeMe" action="/" method="get">
+        <p>
+            <label for="txtInput">List to Alphabetize:</label><br />
+            <textarea id="txtInput" name="txtInput" rows="5" cols="50" onclick="javascript: this.value='';">@ViewBag.InputText</textarea>
+        </p>
+        <p>
+            <input type="submit" id="btnSubmit" name="btnSubmit" value="Alphabetize" />
+            <input type="reset" id="btnReset" name="btnReset" value="Start Again" onclick="replaceCurrentPage('/');" />
+        </p>
+    </form>
+</p>

@@ -1,0 +1,12 @@
+C:\Code\GitHub\Alphabetize-Me\Solution\Alphabetize Me\AlphabetizeMe.ClassLibrary\bin\Debug\net8.0\AlphabetizeMe.ClassLibrary.deps.json
+C:\Code\GitHub\Alphabetize-Me\Solution\Alphabetize Me\AlphabetizeMe.ClassLibrary\bin\Debug\net8.0\AlphabetizeMe.ClassLibrary.dll
+C:\Code\GitHub\Alphabetize-Me\Solution\Alphabetize Me\AlphabetizeMe.ClassLibrary\bin\Debug\net8.0\AlphabetizeMe.ClassLibrary.pdb
+C:\Code\GitHub\Alphabetize-Me\Solution\Alphabetize Me\AlphabetizeMe.ClassLibrary\obj\Debug\net8.0\AlphabetizeMe.ClassLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Code\GitHub\Alphabetize-Me\Solution\Alphabetize Me\AlphabetizeMe.ClassLibrary\obj\Debug\net8.0\AlphabetizeMe.ClassLibrary.AssemblyInfoInputs.cache
+C:\Code\GitHub\Alphabetize-Me\Solution\Alphabetize Me\AlphabetizeMe.ClassLibrary\obj\Debug\net8.0\AlphabetizeMe.ClassLibrary.AssemblyInfo.cs
+C:\Code\GitHub\Alphabetize-Me\Solution\Alphabetize Me\AlphabetizeMe.ClassLibrary\obj\Debug\net8.0\AlphabetizeMe.ClassLibrary.csproj.CoreCompileInputs.cache
+C:\Code\GitHub\Alphabetize-Me\Solution\Alphabetize Me\AlphabetizeMe.ClassLibrary\obj\Debug\net8.0\AlphabetizeMe.ClassLibrary.sourcelink.json
+C:\Code\GitHub\Alphabetize-Me\Solution\Alphabetize Me\AlphabetizeMe.ClassLibrary\obj\Debug\net8.0\AlphabetizeMe.ClassLibrary.dll
+C:\Code\GitHub\Alphabetize-Me\Solution\Alphabetize Me\AlphabetizeMe.ClassLibrary\obj\Debug\net8.0\refint\AlphabetizeMe.ClassLibrary.dll
+C:\Code\GitHub\Alphabetize-Me\Solution\Alphabetize Me\AlphabetizeMe.ClassLibrary\obj\Debug\net8.0\AlphabetizeMe.ClassLibrary.pdb
+C:\Code\GitHub\Alphabetize-Me\Solution\Alphabetize Me\AlphabetizeMe.ClassLibrary\obj\Debug\net8.0\ref\AlphabetizeMe.ClassLibrary.dll
