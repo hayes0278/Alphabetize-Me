@@ -29,26 +29,6 @@ namespace AlphabetizeMe.ClassLibrary
             return _originalList;
         }
 
-        public List<string> ConvertListToStream(string stream)
-        {
-            try
-            {
-                _inputStream = stream;
-
-                if (_inputStream.Contains(_newLineDesignation))
-                {
-                    stream.Replace(_newLineDesignation, ",");
-                    string[] stringArray = stream.Split(',');
-                    List<string> _originalList = stringArray.ToList();
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            return _originalList;
-        }
-
         public List<string> AlphabetizeMe(List<string> list)
         {
             _originalList = list;
