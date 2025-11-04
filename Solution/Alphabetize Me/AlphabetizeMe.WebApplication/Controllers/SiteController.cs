@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using AlphabetizeMe.ClassLibrary;
 using AlphabetizeMe.WebApplication.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,11 +16,24 @@ namespace AlphabetizeMe.WebApplication.Controllers
 
         public IActionResult Index()
         {
-            return View();
-        }
+            string formProcessed = Request.Query["btnSubmit"];
 
-        public IActionResult Privacy()
-        {
+            if (formProcessed != null && formProcessed.ToLower() == "alphabetize")
+            {
+                string inputText = Request.Query["txtInput"]; inputText.Trim();
+
+                ViewBag.InputText = inputText;
+
+                AlphabetizeMeApp myApp = new AlphabetizeMeApp();
+                if (myApp.CheckUserInput(inputText))
+                {
+                    List<string> myList = new List<string>();
+                    myList = myApp.ConvertStreamToList(inputText);
+                    myList = myApp.AlphabetizeMe(myList);
+                    ViewBag.InputText = myList.ToArray();
+                }
+            }
+            
             return View();
         }
 
