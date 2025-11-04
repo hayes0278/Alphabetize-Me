@@ -22,15 +22,16 @@ namespace AlphabetizeMe.WebApplication.Controllers
             {
                 string inputText = Request.Query["txtInput"]; inputText.Trim();
 
-                ViewBag.InputText = inputText;
-
                 AlphabetizeMeApp myApp = new AlphabetizeMeApp();
                 if (myApp.CheckUserInput(inputText))
                 {
                     List<string> myList = new List<string>();
                     myList = myApp.ConvertStreamToList(inputText);
                     myList = myApp.AlphabetizeMe(myList);
-                    ViewBag.InputText = myList.ToArray();
+                    foreach (string item in myList)
+                    {
+                        ViewBag.InputText = ViewBag.InputText + item + "\r";
+                    }
                 }
             }
             

@@ -35,5 +35,11 @@ function changeLanguage(newLanguage) {
     setCookie("culture", newLanguage, 5);
     replaceCurrentPage('/')
 }
+function copyToClipboard() {
+    
+}
+function pasteFromClipboard() {
+    
+}
 
 document.getElementById("year").innerHTML = new Date().getFullYear();

@@ -18,20 +18,15 @@ namespace AlphabetizeMe.ClassLibrary
 
         public List<string> ConvertStreamToList(string stream)
         {
-            try
-            {
-                _inputStream = stream;
+            _inputStream = stream;
 
                 if (_inputStream.Contains(_newLineDesignation)) {
                     stream = stream.Replace(_newLineDesignation, ",");
                     string[] stringArray = stream.Split(',');
-                    List<string> _originalList = stringArray.ToList();
+                    return _originalList = stringArray.ToList();
                 }
-            }
-            catch (Exception ex) {
-                Console.WriteLine(ex.Message);
-            }
-                return _originalList;
+
+            return _originalList;
         }
 
         public List<string> ConvertListToStream(string stream)
