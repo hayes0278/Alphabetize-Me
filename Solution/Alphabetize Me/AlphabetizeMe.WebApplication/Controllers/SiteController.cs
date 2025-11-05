@@ -26,11 +26,11 @@ namespace AlphabetizeMe.WebApplication.Controllers
                 if (myApp.CheckUserInput(inputText))
                 {
                     List<string> myList = new List<string>();
-                    myList = myApp.ConvertStreamToList(inputText);
+                    myList = myApp.ConvertStreamToList(inputText, "\r\n");
                     myList = myApp.AlphabetizeMe(myList);
                     foreach (string item in myList)
                     {
-                        ViewBag.InputText = ViewBag.InputText + item + "\r";
+                        ViewBag.InputText = ViewBag.InputText + item + "\n";
                     }
                 }
             }

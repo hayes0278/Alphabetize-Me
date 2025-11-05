@@ -10,7 +10,7 @@
         "tags": [
           "AlphabetizeMe"
         ],
-        "operationId": "GetVoices",
+        "operationId": "GetList",
         "responses": {
           "200": {
             "description": "OK",
@@ -48,6 +48,15 @@
           "AlphabetizeMe"
         ],
         "operationId": "PostSpeechSynthesis",
+        "parameters": [
+          {
+            "name": "input",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK",
@@ -56,7 +65,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ListData"
+                    "type": "string"
                   }
                 }
               },
@@ -64,7 +73,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ListData"
+                    "type": "string"
                   }
                 }
               },
@@ -72,7 +81,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ListData"
+                    "type": "string"
                   }
                 }
               }

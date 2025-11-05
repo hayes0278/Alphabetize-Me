@@ -1,5 +1,6 @@
 ﻿using AlphabetizeMe.ClassLibrary;
 using Microsoft.AspNetCore.Mvc;
+using System.Xml.Linq;
 
 namespace AlphabetizeMe.WebApplication.Controllers
 {
@@ -19,7 +20,7 @@ namespace AlphabetizeMe.WebApplication.Controllers
             _logger = logger;
         }
 
-        [HttpGet(Name = "GetVoices")]
+        [HttpGet(Name = "GetList")]
         public IEnumerable<ListData> Get()
         {
             return Enumerable.Range(1, Summaries.Length).Select(index => new ListData
@@ -30,13 +31,13 @@ namespace AlphabetizeMe.WebApplication.Controllers
         }
 
         [HttpPost(Name = "PostSpeechSynthesis")]
-        public IEnumerable<ListData> Post()
+        public IEnumerable<string> Post(string input)
         {
-            return Enumerable.Range(1, Summaries.Length).Select(index => new ListData
-            {
-                Name = Summaries[Random.Shared.Next(Summaries.Length)]
-            })
-            .ToArray();
+            AlphabetizeMeApp myApp = new AlphabetizeMeApp();
+            bool inputAlright = myApp.CheckUserInput(input);
+            List<string> myList = new List<string>();
+            myList = myApp.ConvertStreamToList(input, "\r\n");
+            return myList = myApp.AlphabetizeMe(myList);
         }
     }
 }

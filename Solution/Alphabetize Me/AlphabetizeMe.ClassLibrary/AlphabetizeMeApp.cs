@@ -16,15 +16,61 @@ namespace AlphabetizeMe.ClassLibrary
         List<string> _alphabatisedList = null;
         string _newLineDesignation = "\r\n";
 
-        public List<string> ConvertStreamToList(string stream)
+        public List<string> ConvertStreamToList(string stream, string dataSeperator)
         {
             _inputStream = stream;
 
-                if (_inputStream.Contains(_newLineDesignation)) {
-                    stream = stream.Replace(_newLineDesignation, ",");
-                    string[] stringArray = stream.Split(',');
-                    return _originalList = stringArray.ToList();
+            if (_inputStream.Contains(dataSeperator))
+            {
+                if (!_inputStream.Contains(","))
+                {
+                    stream = stream.Replace(dataSeperator, ",");
                 }
+
+                string[] stringArray = stream.Split(',');
+                return _originalList = stringArray.ToList();
+            }
+
+            return _originalList;
+        }
+
+        public List<string> ConvertReturnNewLineToList(string stream)
+        {
+            _inputStream = stream;
+
+            if (_inputStream.Contains("\r\n"))
+            {
+                stream = stream.Replace("\r\n", ",");
+                string[] stringArray = stream.Split(',');
+                return _originalList = stringArray.ToList();
+            }
+
+            return _originalList;
+        }
+
+        public List<string> ConvertCsvToList(string stream)
+        {
+            _inputStream = stream;
+
+            if (_inputStream.Contains(","))
+            {
+                string[] stringArray = stream.Split(',');
+                return _originalList = stringArray.ToList();
+            }
+
+            return _originalList;
+        }
+
+        public List<string> ConvertTsvToList(string stream)
+        {
+            _inputStream = stream;
+
+            if (_inputStream.Contains("\t"))
+            {
+                stream = stream.Replace("\t", ",");
+                string[] stringArray = stream.Split(',');
+                return _originalList = stringArray.ToList();
+            }
 
             return _originalList;
         }

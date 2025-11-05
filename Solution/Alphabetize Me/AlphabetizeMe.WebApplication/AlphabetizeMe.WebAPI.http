@@ -1,11 +1,11 @@
 @SpeechSynthesis.WebAPI_HostAddress = https://localhost:7021
 
-GET {{SpeechSynthesis.WebAPI_HostAddress}}/voices/
+GET {{SpeechSynthesis.WebAPI_HostAddress}}/list/
 Accept: application/json
 
 ###
 
-POST {{SpeechSynthesis.WebAPI_HostAddress}}/speechsynthesis/
+POST {{SpeechSynthesis.WebAPI_HostAddress}}/alphabetizeme/
 Accept: application/json
 
 ###

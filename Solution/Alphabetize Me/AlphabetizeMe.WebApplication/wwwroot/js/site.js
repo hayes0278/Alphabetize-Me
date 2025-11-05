@@ -35,11 +35,29 @@ function changeLanguage(newLanguage) {
     setCookie("culture", newLanguage, 5);
     replaceCurrentPage('/')
 }
-function copyToClipboard() {
-    
+function startAgain() {
+    replaceCurrentPage("/");
+    document.getElementById("txtInput").focus();
 }
-function pasteFromClipboard() {
-    
+
+async function pasteTextFromClipboard() {
+    try {
+        const text = await navigator.clipboard.readText();
+        console.log("Pasted text:", text); ///
+        document.getElementById('myOutputElement').innerText = text;
+    } catch (err) {
+        console.error("Failed to read clipboard contents:", err);
+    }
+}
+
+async function copyTextToClipboard() {
+    try {
+        document.getElementById("txtInput").nodeValue;
+        await navigator.clipboard.writeText(textToCopy);
+        console.log('Text copied to clipboard:', textToCopy); /// 
+    } catch (err) {
+        console.error('Failed to copy text:', err);
+    }
 }
 
 document.getElementById("year").innerHTML = new Date().getFullYear();

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AlphabetizeMe.WebApplication")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ab6263e5f31f5f2eb7606f60a64168540078e290")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ed09ec0478dcec7b3cdda7c37abb8d1d8e9fe89c")]
 [assembly: System.Reflection.AssemblyProductAttribute("AlphabetizeMe.WebApplication")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AlphabetizeMe.WebApplication")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

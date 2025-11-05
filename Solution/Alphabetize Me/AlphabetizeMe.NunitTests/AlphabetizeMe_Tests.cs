@@ -14,7 +14,7 @@ namespace AlphabetizeMe.NunitTests
         {
             AlphabetizeMeApp app = new AlphabetizeMeApp();
             string testStream = "Test\r\nMe\r\nHere";
-            app.ConvertStreamToList(testStream);
+            app.ConvertStreamToList(testStream, "\r\n");
             if (app != null) { Assert.Pass(); } else { Assert.Fail(); }
         }
 
