@@ -13,6 +13,8 @@ A small utility for securely alphabetizing a list of data values.
 
 ![Processed Screenshot](Media/Screenshots/ProcessedPage.png)
 
+![Swagger Screenshot](Media/Screenshots/SwaggerPage.png)
+
 ## Source Code
 View the project [Source Code](https://github.com/hayes0278/Alphabetize-Me).
 

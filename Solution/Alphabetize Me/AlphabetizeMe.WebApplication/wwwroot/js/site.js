@@ -37,26 +37,26 @@ function changeLanguage(newLanguage) {
 }
 function startAgain() {
     replaceCurrentPage("/");
-    document.getElementById("txtInput").focus();
+    setTimeout(() => {
+        document.getElementById("txtInput").focus();
+    }, 2000);
 }
 
 async function pasteTextFromClipboard() {
     try {
-        const text = await navigator.clipboard.readText();
-        console.log("Pasted text:", text); ///
-        document.getElementById('myOutputElement').innerText = text;
+        const textToPaste = await navigator.clipboard.readText();
+        document.getElementById('txtInput').innerText = textToPaste;
     } catch (err) {
-        console.error("Failed to read clipboard contents:", err);
+        console.error("Failed to read clipboard contents: ", err);
     }
 }
 
 async function copyTextToClipboard() {
     try {
-        document.getElementById("txtInput").nodeValue;
+        const textToCopy = document.getElementById("txtInput").value;
         await navigator.clipboard.writeText(textToCopy);
-        console.log('Text copied to clipboard:', textToCopy); /// 
     } catch (err) {
-        console.error('Failed to copy text:', err);
+        console.error('Failed to copy text: ', err);
     }
 }
 

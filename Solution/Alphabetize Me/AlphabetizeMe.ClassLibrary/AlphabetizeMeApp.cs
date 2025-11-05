@@ -20,18 +20,13 @@ namespace AlphabetizeMe.ClassLibrary
         {
             _inputStream = stream;
 
-            if (_inputStream.Contains(dataSeperator))
+            if (!_inputStream.Contains(","))
             {
-                if (!_inputStream.Contains(","))
-                {
-                    stream = stream.Replace(dataSeperator, ",");
-                }
-
-                string[] stringArray = stream.Split(',');
-                return _originalList = stringArray.ToList();
+                stream = stream.Replace(dataSeperator, ",");
             }
 
-            return _originalList;
+            string[] stringArray = stream.Split(',');
+            return _originalList = stringArray.ToList();
         }
 
         public List<string> ConvertReturnNewLineToList(string stream)
@@ -90,7 +85,7 @@ namespace AlphabetizeMe.ClassLibrary
             _inputStream = stream;
 
             if (string.IsNullOrEmpty(_inputStream)) { return false; }
-            if (_inputStream.Contains(",")) { return false; }
+            if (_inputStream.Contains(",")) { return true; }
             if (_inputStream.Contains("\t")) { return false; }
             if (_inputStream.Contains("\r\n")) { return true; }
             if (_inputStream.Contains("%0D%0A")) { return true; }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AlphabetizeMe.ClassLibrary")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ed09ec0478dcec7b3cdda7c37abb8d1d8e9fe89c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b50bee188548e0e7571d4c5dfeb2d098aaebc6f8")]
 [assembly: System.Reflection.AssemblyProductAttribute("AlphabetizeMe.ClassLibrary")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AlphabetizeMe.ClassLibrary")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
