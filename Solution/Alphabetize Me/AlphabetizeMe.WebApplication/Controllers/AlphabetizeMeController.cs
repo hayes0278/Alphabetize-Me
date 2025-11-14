@@ -1,6 +1,5 @@
 ﻿using AlphabetizeMe.ClassLibrary;
 using Microsoft.AspNetCore.Mvc;
-using System.Xml.Linq;
 
 namespace AlphabetizeMe.WebApplication.Controllers
 {
